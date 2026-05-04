@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap');
+
+   * { margin: 0; padding: 0; box-sizing: border-box; }
+   
+   body {
+       min-height: 100vh;
+       background: linear-gradient(135deg, #0a0a0a 0%, #111111 50%, #1a1a1a 100%);
+       font-family: 'Barlow', sans-serif;
+       color: #D3D1C7;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       padding: 2.5rem 1.5rem;
+   }
+   
+   /* ── Contenedor central ── */
+   body > h2,
+   body > form,
+   body > hr,
+   body > pre,
+   body > div:not([style*="absolute"]) {
+       width: 100%;
+       max-width: 620px;
+   }
+   
+   /* ── Título principal ── */
+   h2 {
+       font-family: 'Barlow Condensed', sans-serif;
+       font-size: 22px;
+       font-weight: 700;
+       text-transform: uppercase;
+       letter-spacing: 0.06em;
+       color: #BA7517;
+       margin: 1.5rem 0 1.25rem;
+       text-align: center;
+   }
+   
+   /* ── Formulario de filtros ── */
+   form {
+       background: rgba(255,255,255,0.03);
+       border: 0.5px solid rgba(186,117,23,0.2);
+       border-radius: 14px;
+       padding: 1.25rem 1.5rem;
+       width: 100%;
+       max-width: 620px;
+       backdrop-filter: blur(12px);
+       margin-bottom: 1.25rem;
+       display: flex;
+       gap: 0.75rem;
+       align-items: center;
+       flex-wrap: wrap;
+   }
+   
+   input[type="date"],
+   select {
+       flex: 1;
+       min-width: 140px;
+       background: rgba(255,255,255,0.05);
+       border: 1px solid rgba(186,117,23,0.22);
+       border-radius: 8px;
+       padding: 9px 14px;
+       font-size: 14px;
+       font-family: 'Barlow', sans-serif;
+       color: #D3D1C7;
+       outline: none;
+       transition: border-color 0.2s, background 0.2s;
+       appearance: none;
+       color-scheme: dark;
+   }
+   
+   input[type="date"]:focus,
+   select:focus {
+       border-color: rgba(186,117,23,0.6);
+       background: rgba(186,117,23,0.07);
+   }
+   
+   select option { background: #111111; color: #D3D1C7; }
+   
+   /* ── Botón generar ── */
+   button[type="submit"]:not([name="logout"]) {
+       background: #BA7517;
+       color: #0a0a0a;
+       border: none;
+       border-radius: 8px;
+       padding: 9px 20px;
+       font-family: 'Barlow Condensed', sans-serif;
+       font-size: 15px;
+       font-weight: 700;
+       letter-spacing: 0.06em;
+       text-transform: uppercase;
+       cursor: pointer;
+       transition: background 0.2s, transform 0.1s;
+       white-space: nowrap;
+   }
+   
+   button[type="submit"]:not([name="logout"]):hover { background: #8a5410; color: #fff; }
+   button[type="submit"]:not([name="logout"]):active { transform: scale(0.98); }
+   
+   /* ── Botón cerrar sesión ── */
+   button[name="logout"] {
+       background: rgba(226,75,74,0.8) !important;
+       color: white !important;
+       padding: 8px 14px !important;
+       border: none !important;
+       border-radius: 8px !important;
+       cursor: pointer !important;
+       font-family: 'Barlow Condensed', sans-serif !important;
+       font-size: 13px !important;
+       font-weight: 700 !important;
+       letter-spacing: 0.05em !important;
+       text-transform: uppercase !important;
+       transition: background 0.2s !important;
+   }
+   
+   button[name="logout"]:hover { background: rgba(163,45,45,0.95) !important; }
+   
+   /* ── Separador ── */
+   hr {
+       border: none;
+       border-top: 0.5px solid rgba(186,117,23,0.18);
+       margin: 1.5rem 0;
+       width: 100%;
+       max-width: 620px;
+   }
+   
+   /* ── Bloque de reporte (pre) ── */
+   pre {
+       background: rgba(255,255,255,0.03);
+       border: 0.5px solid rgba(186,117,23,0.18);
+       border-radius: 14px;
+       padding: 1.75rem 2rem;
+       width: 100%;
+       max-width: 620px;
+       font-family: 'Barlow', sans-serif;
+       font-size: 14px;
+       line-height: 1.9;
+       color: #B4B2A9;
+       white-space: pre-wrap;
+       word-break: break-word;
+   }
+   
+   /* Saludo destacado */
+   pre strong,
+   pre b {
+       color: #BA7517;
+       font-weight: 600;
+   }
+   
+   /* Bloques de hora */
+   pre .bloque-hora {
+       color: #BA7517;
+       font-weight: 600;
+       font-family: 'Barlow Condensed', sans-serif;
+       font-size: 15px;
+       letter-spacing: 0.04em;
+   }
+   
+   /* Máquinas */
+   pre .maquina {
+       color: #D3D1C7;
+       font-weight: 500;
+   }
+   
+   /* Sin producción */
+   pre .sin-prod {
+       color: #5F5E5A;
+       font-style: italic;
+   }
